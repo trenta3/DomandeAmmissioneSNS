@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{article}
+
+\title{Domande orali di ammissione SNS}
+\author{}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xfrac}
+\usepackage[italian]{babel}
+\usepackage{xifthen}
+\usepackage{xparse}
+\usepackage{hyperref}
+
+% Definiamo i vari ambienti
+\NewDocumentCommand{\ZZ}{G{}}{
+  \IfNoValueTF{#1}
+	{\mathbb{Z}}
+	{\mathbb{Z}_{#1}}
+}
+\NewDocumentCommand{\FF}{G{}}{
+  \IfNoValueTF{#1}
+	{\mathbb{F}}
+	{\mathbb{F}_{#1}}
+}
+\newcommand{\su}[2]{\sfrac{#1}{#2}}
+
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\CC}{\mathbb{C}}
+
+%\newcommand{\FF}[1]{\mathbb{F}_{#1}}
+%\newcommand{\ZZ}[1]{\mathbb{Z}_{#1}}
+
+\newcommand{\Nplus}{\NN^{+}}
+
+\newcommand{\cart}{\times}
+\newcommand{\Mtr}[3]{\mathcal{M}(#1, #2, #3)}
+
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\newcommand{\tc}{\mbox{ t.c. }}
+
+\newcommand{\Zx}{\mathbb{Z}[x]}
+\newcommand{\Qx}{\QQ[x]}
+\newcommand{\Zp}{\su{\mathbb{Z}}{p\mathbb{Z}}}
+\newcommand{\Zpx}{\Zp [x]}
+\newcommand{\Hint}{{\bf Hint: }}
+\newcommand{\Ker}{\mathcal{K}\mbox{er} }
+\newcommand{\degree}{\mbox{deg}}
+
+\newcommand{\MCD}[2]{\mathcal{(} #1 \mathcal{,} #2 \mathcal{)}}
+\newcommand{\ex}[1]{\subsubsection*{#1}}
+\newcommand{\rec}[1]{{\bf #1}}
+\newcommand{\equip}{\sim}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\norm}[1]{\mid{#1}\mid}
+\newcommand{\todo}{{\bf TODO Prossimamente}}
+\newcommand{\NINI}{{\bf NINI }}
+\newcommand{\hide}[1]{{\color{white}{#1}}}
+
+\begin{document}
+\maketitle
+\section*{Domande per Matematici e Fisici}
+\subsection*{Domande di Matematica}
+\begin{itemize}
+\item Trovare una bigezione esplicita di $\QQ^{+}$ in $\ZZ$ (non il serpentone sul piano ma qualcosa con i primi). Dimostrare che l'insieme dei primi che divide un polinomio fissato in $\ZZ [x]$ valutato su un intero \`e infinito. \\ Si consideri un grafo costituito da un numero finito di vertici allineati su un segmento; di questo consideriamo una colorazione dei vertici con due colori A e B. Chiamiamo "segmento completo" uno spigolo del grafo che abbia i due vertici colorati con A e B. Si dimostri allora che se i vertici estremi del grafo hanno colori differenti allora il numero totale di segmenti completi del grafo \`e un numero dispari (lemma di Sperner).
+\item Fra tutti i poligoni ciclici (ovvero i cui vertici stanno tutti su una stessa circonferenza) di $n$ lati, quali sono quelli con area massima? \\ Hai un polinomio monico $p(x) \in \RR[x]$ a coefficienti $a_0, a_1, \ldots, a_n$ tutti positivi tale che $a_0*a_n + a_1*a_{n-1} + \ldots + a_n * a_0 > 2^n a_0$. Dimostra che ha almeno una radice non reale.
+\item $x^y = y^x$. Risolvere per $x,y \in \ZZ$ e discutere per $x,y \in \RR$. \\ Risolvere $f(x)^n + g(x)^n = h(x)^n$, con $f(x),g(x),h(x) \in \CC [x], n \in \NN, n \ge 2$.
+\item Caratterizzare tutti i polinomi $f(x) \in \ZZ [x]$ che valutati sugli interi sono sempre dei quadrati perfetti. \\ Dato un insieme $X$ di $n$ elementi, in quanti modi \`e possibile partizionarlo in sottoinsiemi, scegliendo per ogni sottoinsieme un rappresentante? (Esempio: $n=4$, $X = \{a,b,c,d\}, P1 = \{\{a*,b\},\{c*,d\}\} e P2 = \{\{a,b*\},\{c*,d\}\}$ sono considerate diverse. (Con $*$ si indica il rappresentante scelto))
+\item Parametrizzare i punti a coordinate razionali in un circonferenza (ovvero esprimerli tutti in funzione di un parametro). Parametrizzare i punti razionali in una conica ed in una curva polinomiale generica. Parametrizzare tutte le coppie di punti razionali a distanza razionale in una circonferenza. \\ Lunghezza e percorso minimo sulla superficie di un ottaedro per andare dal centro di una faccia al centro della faccia opposta e numero di possibili percorsi minimi.
+\item Hai un foglio di carta e vuoi inserirlo in una busta piegandolo in tre parti uguali rispetto alla sua lunghezza. Fai la prima piega a caso (ovvero ad una lunghezza arbitraria). Poi riapri il foglio e ripiega il margine opposto sulla prima piega che hai fatto (in modo che il margine opposto e la linea lasciata dalla piega vengano a coincidere). Ora riapri il foglio e fai la stessa cosa con il primo margine (piegalo sulla seconda piega che hai lasciato) e cos\`i via... Dire cosa succede a seconda della lunghezza a cui fai la prima piega (Arrivi sempre ad averlo piegato perfettamente ad 1/3, oppure ci sono casi in cui ci\`o non succede?). \\ Sul piano, partendo da un punto a tua scelta, inizia un percorso disegnando un segmento di lunghezza $1$ in una direzione a tua scelta, poi uno di lunghezza $a$ ($a \in \RR$) sempre nella direzione che vuoi (puoi cambiarla), poi uno di lunghezza $a^2$, $a^3$, $\ldots$ Per quali $a > 1$ puoi, continuando in questo modo, chiudere il percorso (ovvero tornare al punto di partenza dopo un numero finito di segmenti tracciati?
+\item Per $P(x) \in \RR [x]$ si ha che $\forall x \in \RR \quad x P(\cos(x)) = 0$. Cosa si pu\`o dedurre sul polinomio? Consideriamo uno "pseudo-polinomio" nella variabile $\cos(x)$, i cui termini noti sono polinomi in $x$ a coefficienti reali. Cosa si pu\`o dedurre sul polinomio? \\ Si gioca con una moneta. Il primo che fa testa vince il gioco. Quando si fa croce si passa la moneta all'avversario. Qual \`e la probabilit\`a di vincere iniziando per primo? \\ Consideriamo un cubo. Costruiamo un ottaedro con i punti centrali delle facce e poi costruiamo un cubo con i punti centrali delle facce dell'ottaedro. Trovare il rapporto tra i lati dei due cubi.
+\item Massimizzare il prodotto di alcuni numeri, con il vincolo che la loro somma sia $1000$. (insomma disuguaglianza tra media aritmetica e geometrica). \\ Date tre rette sghembe nello spazio, esiste sempre una retta che passa per tutte e tre? (ovvero che interseca ciascuna in un punto). Caratterizzare qualitativamente quali sono le rette che effettivamente passano per le tre rette sghembe date.
+\item Discutere i coefficienti delle equazioni cartesiane di due circonferenze ortogonali che si intersecano (ovvero nei punti in cui si intersecano le circonferenze hanno rette tangenti ortogonali). \\ Trovare tutte le soluzioni $f: \RR \rightarrow \RR$ tali che $\forall x,y \in \RR \quad f(x+y) = f(x)f(y)$ con $f$ continua. Escludendo le soluzioni costanti, \`e possibile che le funzioni vadano da $\QQ$ a $\QQ$ per ogni $x,y$?
+\item Cosa si pu\`o dire sui poligoni equiangoli inscritti, nello specifico a proposito dei loro lati, e alcune cose a proposito di MCD e mcm (ad esempio dimostrare la correttezza dell'algoritmo di euclide)
+\item Dato un triangolo $ABC$ si prendano tre punti $A'$ su $BC$, $B'$ su $AC$, $C'$ su $AB$. Si dica sotto quali condizioni sui punti si ha che $[AC'B']=[BA'C']=[CB'A']=[A'B'C']$. (Con $[DEF]$ si indica l'area del triangolo $DEF$) \\ Si prenda un cubo disposto su un piano in modo che due lati appoggiati al piano siano paralleli ad una retta data (cos\`i il cubo pu\`o essere disposto in $24$ modi: scelgo in $6$ modi la faccia a terra ed in $4$ modi la faccia che guardo). Una mossa $M$ pu\`o ribaltare il cubo attorno ad uno spigolo appoggiato al piano. Sia $S$ una sequenza di mosse (ad esempio ribalto 2 volte a destra, 101 volte a sinistra, 1635 volte in alto), dimostrare che, indipendentemente dalla sequenza scelta, esiste $k \in \NN$ tale che, ripetendo la sequenza $S$ per $k$ volte si ritorna nella posizione iniziale.
+\item Dati tre punti puoi fare un triangolo che ha quelli come punti medi? \`E unico? Poi la stessa cosa con quattro punti ed un quadrilatero.
+\item Se una banca ti da il 12\% di interesse all'anno e un'altra ti da l'1\% al mese qual è la pi\`u conveniente? E se una te ne da il $\frac{12}{365}\%$ qual \`e la pi\`u conveniente? Dimostra che la serie che ne esce \`e crescente. \\ Se ho un polinomio $P(x) \in \NN[x]$ e sai che $P(a) = P(b) = P(c) = P(d) = 1 $ con $a,b,c,d$ distinti, dimostra che non esiste un $x \in \NN$ per cui il polinomio vale 30.
+\item Qualche domanda di probabilit\`a di estrazioni varie con palline bianche e nere da un'urna. \\ Hai un biliardo triangolare e lanci una pallina da un punto qualsiasi, \`e possibile che la pallina dopo due rimbalzi torni nel punto di partenza?
+\item Trova i polinomi che sono uguali ai loro inversi (ovvero che siano anche invertibili). Trova le funzioni che sono uguali al loro inverso. \\ Quanti sono gli isomorfismi di un tetraedro (ovvero in quanti modi posso ruotarlo in modo che non si noti la differenza; cio\`e funzioni che mandano spigoli in spigoli e preservano le loro distanze a due a due)? E di un cubo?
+\item Pu\`o esistere nel piano cartesiano un triangolo equilatero con vertici a coordinate razionali e con area razionale? (\Hint calcolare l'area come determinante di una matrice, oppure in cartesiane, oppure usare il teorema di Pick, che per\`o \`e una cannonata e probabilmente vi chiederebbero qualcosa di pi\`u a proposito). \\ Ho un cono, ci infilo un cappio e tiro lungo una generatrice del cono. Cosa succede? (Calcolare l'angolo di apertura critico del cono, ovvero quello al quale, tirando, il cappio si sfila dal cono, vedi capitolo uno del Morin di meccanica).
+\item Che numeri si possono formare con la ridotta $n$-esima $\sum_{i=0}^n \pm 2^i$ \\ Dimostrare che date le distanze di un punto da tre vertici di un triangolo, esso \`e determinato univocamente ed i punti a lui vicini hanno coordinate vicine (stile continuit\`a).
+\item \`E possibile con una linea dritta su un cubo toccare tutte le sei facce? Venivano date due brocche, una con acqua ed una con vino e ad ogni passaggio si scambiavano parte di liquido (1/10) e bisogna studiarlo senza ricavare la formula per l'$n$-esimo passaggio generico.
+\end{itemize}
+
+\subsection*{Domande di Fisica}
+\begin{itemize}
+\item Propagazione onde elettromagnetiche e loro interferenza. Esperimento di Young. Interferenza costruttiva e distruttiva
+\item Hai un'auto che accelera da $0$ fino a $V$ metri al secondo. Sapendo che la benzina consumata \`e proporzionale alla variazione di energia secondo una costante $k$, quanta benzina ha usato la macchina? Ora invece ti trovi su un treno che si muove rispetto all'auto a velocit\`a $v_t$. Rifai il calcolo di prima. Perch\`e ti risulta che non consuma la stessa quantit\`a di benzina?
+\item Si trovi un modo per stimare l'energia rilasciata dall'esplosione di una bomba atomica usando dei coriandoli. (Hint: si supponga che l'onda d'urto dell'esplosione avanzi secondo la legge $r(t) = k t^a$, con $k$ ed $a$ costanti). \\ Qual \`e la relazione tra il numero di Avogadro, il raggio di Bohr e la massa del protone?
+\item Stimare la temperatura media della superficie terrestre (trascurando il calore interno della Terra). Cosa sono e perch\`e avvengono le eclissi di sole e di luna. Quali devono essere le dimensioni e le distanze relative tra pianeta e satellite affinch\`e ci siano eclissi.
+\item Perch\`e nell'universo c'\`e tanto idrogeno mentre nell'atmosfera terrestre non ce n'\`e? (Solo considerazioni di carattere fisico riguardo alla temperatura media dell'atmosfera e la velocità di fuga delle molecole presenti).
+\item Spiega le maree (ed in particolare quanta influenza ha la luna in ci\`o, soprattuto per il fatto che sposta il baricentro del sistema Terra-Luna). Spiega l'interazione gravitazionale tra due corpi. In che modo rileveresti la presenza di un pianeta intorno ad una stella?
+\item Ci sono stelle che ruotano ad una velocit\`a angolare molto elevata. Come si pu\`o spiegare questo fenomeno? (Considerazioni sul fatto che le stelle diminuiscono il loro raggio ma il momento angolare si conserva). \\ Come si trovano (possibilmente) i pianeti extrasolari tenendo presente che non si osservano direttamente con il telescopio?
+\item Considera un pendolo di massa variabile. Com'\`e l'equazione del moto? \\ Domande generiche sul momento angolare. Da cosa dipende il periodo di un pendolo per piccole oscillazioni? E quanto variano facendolo dondolare in montagna o in città? (praticamente la variazione di g cambiando la distanza dal centro della terra).
+\item Si ha una sorgente di onde sonore di frequenza $\omega$. Dire in funzione di $\omega$ e della velocit\`a del suono $v$ quanto vale la potenza assorbita per unit\`a di volume ad una distanza $d$ dalla sorgente. Descrivere in breve cosa \`e fisicamente un'onda sonora e trovare sempre nella configurazione precedente il periodo di oscillazione di una particella di aria (sempre posta a distanza $d$). Come si pu\`o dare una stima della frequenza delle onde sonore emesse normalmente da un uomo che parla?
+\item Enuncia il primo principio della termodinamica. \\ Proponi un esperimento per verificarlo: materiale, procedimento, formule usate, dati da sapere e dati da misurare. \\ La temperatura \`e sempre proporzionale all'energia interna di un gas? Quando \`e vero? Quando non lo \`e?
+\item Cosa sai della materia oscura? Calcola la velocit\`a angolare di un disco non omogeneo che ruota (il disco rappresenta in realt\`a una galassia)
+\item Parlami dei fulmini, perch\`e avvengono; imposta un esperimento per calcolare la rigidit\`a dielettrica dell'aria. Fai alcune analisi sull'energia ricevuta da una molecola di gas per effetto di un campo elettrico, imposta qualche analisi dimensionale su da cosa dipende il cammino libero medio dei gas, come dipende questo dalla sua temperatura?
+\item Parla dei dipoli elettrici.
+\item Qual \`e stato il primo esperimento per misurare la pressione atmosferica? (Non l'esperimento di torricelli, ma quello degli emisferi di Magdeburgo) Ora, dando per nota la pressione atmosferica ed il raggio delle emisfere, calcola la forza necessaria a separarle. \\ Trova la relazione che lega pressione atmosferica ed altitudine (\Hint considera la temperatura dell'aria costante).
+\item Quant'\`e il raggio di Bohr? Prova a stimarlo a partire dalla densit\`a media dell'idrogeno allo stato solido (circa 1 $\mbox{g/cm}^3$). \\ Legge dei gas perfetti e commento sul fatto che la costante universale dei gas sia universale.
+\item Perch\`e le macchine consumano pi\`u carburante con le luci accese? (In pratica vedono se ti riesci a raccapezzare con le misure angolari). Funzionamento (molto abbozzato) di una dinamo (o alternatore). \\ Differenza fra un vettore ed uno speudovettore (se vedi tutto allo specchio\ldots prodotti vettoriali\ldots). \\ Equazione d'onda (non dispersiva). Velocit\`a dell'onda (di fase, non di gruppo). Onde elettromagnetiche: polarizzazione. \\ Problema del cubo di resistenze (hai un cubo sui cui spigoli ci sono resistenze tutte uguali, connesse con dei fili lungo gli spigoli. Dire che resistenza viene vista da un ohmmetro posto su due vertici opposti, su due vertici adiacenti, su due vertici sulla diagonale di una faccia).
+\end{itemize}
+
+\section*{Domande per Chimici e Biologi}
+\subsection*{Domande di Matematica}
+\begin{itemize}
+\item Hai due contenitori di volume $1$ Litro e un mestolo dal volume di $0.1$ Litri. Nel contenitore $A$ hai Alcool e nel contenitore $B$ hai Acqua. Se prendo un mestolo dal contenitore A, lo porto in B e mischio bene e successivamente prendo un mestolo dal contenitore B (dopo aver gi\`a trasferito un mestolo dal contenitore A) e lo trasferisco in A, quanto A ci sar\`a in B e quanto B ci sar\`a in A?
+\item Teorema sulle successioni (se una successione converge, ed una sua sottosuccessione tende ad un certo limite, allora tutta la successione converge a quello stesso limite). Poi studiare la successione $a_0 = x$, $a_{n+1} = \sqrt{2 a_n}$ al variare di $x \in \RR^+$: a cosa tende?
+\item Tassellazioni (presentate nella forma della piastrellatura di un pavimento infinito): quali sono le limitazioni sul numero di lati dei poligoni convessi che si possono utilizzare? Come \`e possibile piastrellare con triangoli scaleni? E con dei pentagoni? (non regolari, e volendo anche concavi)
+\item Da un punto $O$ nel piano si tracciano due semirette ortogonali. Nell'angolo retto delle due semirette si prende un punto $P$ di posizione nota e si considera una retta incidente alle due semirette e passante per $P$. Trovare l'area del triangolo formato dalle semirette e dalla retta in base all'angolo formato dalla retta con le semirette.
+\end{itemize}
+\subsection*{Domande di Fisica}
+\begin{itemize}
+\item Sei su un asteroide di volume V, stimando la densità dell'asteroide, calcolare la spinta necessaria che devi darti con un salto per scappare dall'asteroide (ovvero calcolare la velocit\`a di fuga da un asteroide e confrontarla con la velocit\`a ottenibile per un uomo saltando verso l'alto).
+\item \`E data una sfera di metallo cava, uniformemente carica (diciamo positiva all'esterno). Una particella puntiforme, carica negativamente si trova all'esterno con $v_0 = 0 \mbox{ m/s }$. Mettiamo che ci siano due buchi (puntiformi) sulla sfera in modo da far passare la particella. 1) La particella raggiunger\`a l'altra parte della sfera? 2) Quali forze agiscono su di essa durante il suo moto (solo qualitativamente) 3) Disegna un grafico della traiettoria.
+\item Se lascio cadere una pallina in un tubo che attraversa la Terra passando per il centro, arriver\`a dall'altra parte?
+\item Esercizi sulla capacit\`a di un condensatore e sulla legge di Gauss.
+\end{itemize}
+\subsection*{Domande di Chimica}
+\begin{itemize}
+\item Descrivi il DNA (forma, composizione chimica di adenosina, timina, \ldots e cosa tiene insieme la doppia elica). Differenze tra Carbonio e Silicio. Allotropi del Carbonio: geometria molecolare, stabilit\`a e distanze di legame. \\ \`E pi\`u ionico il Fluoruro di potassio o il Cloruro di Potassio? E Perch\`e?
+\item Propriet\`a e reazioni dei gas nobili, perch\`e reagiscono quelli pi\`u in basso nel gruppo e non il viceversa. Cosa hanno di diverso gli elementi scendendo lungo un gruppo (in particolare carbonio e silicio). Parla dei legami ad idrogeno e della cinetica chimica.
+\item Metodi sperimentali per determinare i legami chimici in una molecola. Cio\`e, data una molecola sconosciuta, si vuole sapere come \`e fatta (risposte: spettroscopie varie, NMR, IR, di massa). Poi, domande generiche sulla solubilit\`a, perch\`e un sale si scioglie in acqua e perch\`e non nell'olio. Perch\`e si formano i legami chimici?
+\end{itemize}
+\subsection*{Domande di Biologia}
+\begin{itemize}
+\item Quanti geni ha il genoma umano? Quanto \`e grande la differenza genetica tra topo ed essere umano? Perch\`e allora un topo \`e un topo ed un uomo \`e un uomo? \\ Ragionamenti vari sulla misurazione della velocit\`a di divisione cellulare (visualizzazione con transfezioni virali, problemi associati al procedimento, \ldots, riguardanti soprattuto i problemi di questi esperimenti su cellule neuronali). \\ Disegnare il circuito che rappresenta un neurone. Descrivere il potenziale di azione e di riposo. Mostrare di aver capito i meccanismi fisici che stanno dietro le propagazioni di segnali paragonando diversi modelli sul meccanismo di rilascio di neurotrasmettitori.
+\item Domanda generale sulla mielina; differenza fra la mielina del sistema nervoso centrale e di quello periferico (ma come domanda secondaria, siccome avevo accennato alla distizione). \\ Conduzione del potenziale nei neuroni e sua schematizzazione con dei circuiti, individuando in particolare la parte corrispondente all'esterno ed all'interno del neurone. \\ Procedura per introdurre l'espressione di un gene per una proteina umana in un batterio (struttura del plasmide e suo inserimento, metodi per verificare l'effettiva inserzione del plasmide nei batteri). \\ Cosa pu\`o essere avvenuto se due individui presentano lo stesso DNA in cellule dle sangue e DNA diverso nella mucosa orale? \\ Come isolare una colonia batterica in un mezzo liquido?
+\end{itemize}
+
+\section*{Considerazioni generali sugli orali e consigli di preparazione}
+\begin{itemize}
+\item Fatevi il culo con gli esercizi degli anni scorsi (li trovate sul sito della normale al link \url{http://www.sns.it/didattica/ammissione_ordinario/proveesame/}), perch\`e i risultati degli scritti sono molto, ma veramente molto importanti.
+\item Agli scritti di Fisica, se c'\`e un problema che \`e palesemente difficile da risolvere, non fatevi problemi a fare stime anche piuttosto grossolane ed a spanne. \`E importante saper stimare le cose e capire quali termini si possono trascurare e quali no. Gli esercizi che vertono su analisi dimensionale si possono riconoscere dal fatto che spesso trattano di tematiche che non sono richieste strettamente nel syllabus per l'ammissione (\url{http://www.sns.it/didattica/ammissione_ordinario/programmascienzeI/}). Tipici esempi sono fisica atomica, reticoli cristallini, legami molecolari.
+\item Particolarmente importante, dopo aver fatto gli scritti, trovare gli errori che si sono fatti e risolvere gli esercizi che non sono stati svolti, perch\`e capita che all'orale vengano chiesti.
+\item Se passate gli scritti ed arrivate agli orali, non contraddicete mai quest'uomo: \url{http://normalenews.sns.it/upload/2014/11/DSC5819.jpg}
+\end{itemize}
+\end{document}
